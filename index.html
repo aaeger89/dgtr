@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>大表哥在线生成短链接系统</title>
+  <meta name="description" content="大表哥在线生成短链接系统">
+  <meta name="keywords" content="大表哥在线生成短链接系统">
+  <link rel="shortcut icon" href="http://suo011.test.upcdn.net//static/picture/favicon.ico">
+  <link rel="stylesheet" href="https://lib.baomitu.com/amazeui/2.7.2/css/amazeui.min.css">
+  <link rel="stylesheet" href="./css/plugins.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/oneui.css">
+  <!--[if lt IE 9]>
+    <script src="https://lib.baomitu.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://lib.baomitu.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .shuaibi-tip {
+      background: #fafafa repeating-linear-gradient(-45deg, #fff, #fff 1.125rem, transparent 1.125rem, transparent 2.25rem);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      margin: 20px 0px;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 14px;
+      color: #555555;
+    }
+  </style>
+</head>
+
+<body>
+  <img style="background: linear-gradient(to right,#49BDAD,#f2b9ca);color:#000;" class="full-bg full-bg-bottom" ondragstart="return false;" oncontextmenu="return false;">
+  <br>
+  <div class="col-xs-12 col-sm-10 col-md-8 col-lg-5 center-block" style="float: none;">
+    <div class="widget">
+      <div class="widget-content themed-background-flat text-center" style="background-image:url(http://suo011.test.upcdn.net/img/head.png);background-size: 100% 100%;">
+        <a href="javascript:void(0)">
+          <img src="https://q.qlogo.cn/headimg_dl?dst_uin=1411060&spec=100" alt="Avatar" width="80" style="height: auto filter: alpha(Opacity=80);-moz-opacity: 0.80;opacity: 0.80;" class="img-circle img-thumbnail img-thumbnail-avatar-1x animated zoomInDown">
+        </a>
+      </div>
+      <h2 class="text-center"> <a href="javascript:void(alert('大表哥短链接系统，建议收藏到浏览器书签哦！'));"><b>QQ绿标短链接生成</b></a></h2>
+      <div class="widget-content text-center">
+        <div class="text-center text-muted">
+          <div class="btn-group btn-group-justified">
+            <div class="btn-group">
+              <a href="https://api.btstu.cn/qqtalk/api.php?qq=1411060">
+                <font color="#ff0000"><i class="fa fa-bolt"></i> 联系客服</font>
+              </a></div>
+            <div class="btn-group">
+              <a href="https://s.011.run/dwzapi.html">
+                <font color="#ff0000"><i class="fa fa-bolt"></i> 对接API（代刷后台）</font>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="block full2">
+      <div class="tab-content">
+        <div class="tab-pane active" id="shop">
+          <div class="shuaibi-tip animated tada text-center"><i class="fa fa-heart text-danger"></i> <b>在线生成QQ绿标短链接，支持跳转浏览器，直连强开！</b></div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">短链类型</div>
+              <select name="dwz-type" id="dwz-type" class="form-control">
+                <option value="tcn1">【QQ绿标✅】t.cn③-微博（QQ☑/微信☑）推荐</option><option value="sinaurl1">【微博老域名】sinaurl.cn-微博（QQ☑/微信☑）推荐</option><option value="ddma">【QQ绿标✅】dd.ma-免费（QQ☑/微信☒）-推荐</option><option value="baidu">【百 度大 站】mr.baidu.com-百度（QQ☑/微信☑）推荐</option><option value="rmbaidu">【QQ绿标✅】r.m.baidu.com-百度（QQ☑/微信☑）推荐</option>              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">跳转类型</div>
+              <select name="dwz-pattern" id="dwz-pattern" class="form-control">
+                <option value="1" selected>普通跳转</option><option value="2" >防红跳转</option><option value="3" >直链防红</option>        </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">缩短网址</div>
+              <input type="url" name="url" id="url" value="" class="form-control" placeholder="请输入正确网址" required="">
+            </div>
+          </div>
+          <button type="submit" class="am-btn am-btn-success am-btn-sm am-btn-block am-round" id="start">一键生成</button>
+          <br>
+          <div id="result2" class="form-group" style="display:none;">
+            <tbody id="list">
+            </tbody>
+            </table>
+          </div>
+          <div class="am-modal-bd">
+            <p id="dwz"></p>
+            <p id="data"></p>
+            <p id="tzurl"></p>
+            <p id="qrcode"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default text-center">
+      <div class="panel-body">
+        <span style="font-weight:bold">大表哥短链接系统 <i class="fa fa-heart text-danger"></i> -版权所有 | 本站域名: </span>
+        <span><a href="http://s.011.run"><span style="font-weight:bold">s.011.run</a></span><br>
+        <span><a href="http://beian.miit.gov.cn" target="_blank" style="text-decoration:none;"></a></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://lib.baomitu.com/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://lib.baomitu.com/amazeui/2.3.0/js/amazeui.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#start').click(function() {
+        $('#start').text('正在生成中，请耐心等待...');
+        $("#start").addClass("am-btn-warning").removeClass("am-btn-success");
+        var stype = $("select[id='dwz-type']").val();
+        var pattern = $("select[id='dwz-pattern']").val();
+        var url = $("input[id='url']").val();
+        url = url.replace(/\+/g, "%2B");
+        url = url.replace(/\&/g, "%26");
+        $.ajax({
+          type: "get",
+          url: "http://suo011.test.upcdn.net/api/url.php",
+          dataType: "json",
+          data: 'url=' + url + '&type=' + stype + '&pattern=' + pattern+'&token=26cd939e15871bc9c1d71ab8cdffa8a9',
+          
+          success: function(obj) {
+            $('#start').text('一键生成');
+            $("#start").removeClass("am-btn-warning").addClass("am-btn-success");
+            if (obj.code == 200) {
+              var strJson = JSON.stringify(obj)
+              var data = $.parseJSON(strJson);
+              $('#dwz').html('短链地址：' + data.dwz);
+              $('#qrcode').html('<img class="qrimg" width="200px" src="http://suo011.test.upcdn.net/includes/libs/qrcode.php?size=300&text=' + data.dwz + '" />');
+            } else {
+              alert(obj.msg);
+            }
+          },
+          error: function(obj) {
+            $('#start').text('生成失败');
+            $("#start").removeClass("am-btn-warning").addClass("am-btn-danger");
+          }
+
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
